@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter</title>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <h2 class="text-6xl">Hunting Phone</h2>
+
+    <main class="container mx-auto mt-12">
+
+        <section class="p-4 m-4 bg-gray-400 rounded-xl">
+            <input type="text" placeholder="search..." class="input input-white w-3/4 mr-6" id="search-field" />
+            <button class="btn btn-accent" onclick="handleSearch()">Search</button>
+        </section>
+
+        <!-- loading spinner -->
+        <section>
+            <div class="text-center my-40 hidden" id="loading-spinner">
+                <span class="loading loading-dots loading-lg"></span>
+            </div>
+        </section>
+
+        <!-- Search result -->
+
+        <section>
+            <div id="phone-container" class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            </div>
+
+            <!-- Show all btn -->
+
+            <div id="show-all-container" class="hidden text-center my-12">
+                <button class="btn btn-accent" onclick="handleShowAll()">Show All</button>
+            </div>
+
+        </section>
+
+
+        <!-- show details modal -->
+
+        <section>
+            <!-- You can open the modal using ID.showModal() method -->
+            <dialog id="show_details" class="modal">
+                <div class="modal-box">
+                    <form method="dialog">
+                        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                    </form>
+                    <h3 id="phone-name" class="font-bold text-lg"></h3>
+                    <div id="show-detail-container"></div>
+                </div>
+            </dialog>
+        </section>
+    </main>
+
+    <script src="./js/phone.js"></script>
+</body>
+
+</html>
