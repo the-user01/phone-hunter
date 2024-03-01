@@ -88,7 +88,7 @@ const showPhoneDetails = (phone_info) =>{
         <img src="${image}" class="mx-auto my-6">
         <p><b>Storage: </b>${mainFeatures.storage}</p>
         <p><b>Display Size: </b>${mainFeatures.displaySize}</p>
-        <p><b>Chipset: </b>${mainFeatures.chipset}</p>
+        <p><b>Chipset: </b>${mainFeatures.chipSet}</p>
         <p><b>Memory: </b>${mainFeatures.memory}</p>
         <p><b>Slug: </b>${slug}</p>
         <p><b>Release Date: </b>${releaseDate}</p>
