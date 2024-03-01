@@ -77,8 +77,6 @@ const handleShowDetails = async (phone_id) =>{
 const showPhoneDetails = (phone_info) =>{
     show_details.showModal();
 
-    console.log(phone_info);
-
     const {image, name, brand, mainFeatures, slug, releaseDate, others} = phone_info;
 
     const phoneName = document.getElementById("phone-name");
